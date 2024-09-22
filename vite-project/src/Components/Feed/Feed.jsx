@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import './Feed.css'
 import thumbnail1 from '../../assets/thumbnail1.png'
 import thumbnail2 from '../../assets/thumbnail2.png'
@@ -16,8 +17,9 @@ const Feed = ({ category }) => {
     const [data, setData] = useState([]);
 
     const fetchData = async () => {
-        const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=50&videoCategoryId=${category}&key=${API_KEY}`
-        //await fetch(videoList_url).then(response => response.json()).then(data => setData(data.items))
+        const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&videoCategoryId=${category}&key=${API_KEY}`
+        await fetch(videoList_url).then(response => response.json()).then(data => setData(data.items))
+        console.log(data)
     }
 
     useEffect(() => {
@@ -27,7 +29,7 @@ const Feed = ({ category }) => {
     console.log(data)
     return (
         <div className="feed">
-            {/* {data.map((item, index) => {
+            {data.map((item, index) => {
                 return (
                     <Link to={`video/20/4521`} className='card'>
                         <img src={thumbnail1} alt="" />
@@ -36,7 +38,7 @@ const Feed = ({ category }) => {
                         <p>15k views &bull; 2days ago</p>
                     </Link>
                 )
-            })} */}
+            })}
         </div>
     )
 }
