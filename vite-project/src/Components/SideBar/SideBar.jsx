@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './SideBar.css'
 import home from '../../assets/home.png'
 import game_icon from '../../assets/game_icon.png'
@@ -14,9 +15,9 @@ import tom from '../../assets/tom.png'
 import megan from '../../assets/megan.png'
 import cameron from '../../assets/cameron.png'
 
-const SideBar = () => {
+const SideBar = ({sidebar}) => {
     return (
-        <div className='sidebar'>
+        <div className={`sidebar ${sidebar? '' : 'small-sidebar'}`}>
 
             <div className="shortcut-links">
                 <div className="side-link">

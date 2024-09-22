@@ -1,5 +1,5 @@
-.sidebar{
-    background: #fff;;
+.sidebar {
+    background: #fff;
     width: 15%;
     height: 100vh;
     position: fixed;
@@ -8,12 +8,12 @@
     padding-top: 80px;
 }
 
-.shortcut-links img{
+.shortcut-links img {
     width: 20px;
     margin-right: 20px;
 }
 
-.side-link{
+.side-link {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -22,12 +22,13 @@
     cursor: pointer;
 }
 
-.sidebar hr{
+.sidebar hr {
     border: 0;
     height: 1px;
     background: #ccc;
     width: 85%;
 }
+
 .subcribed-list h3 {
     font-size: 13px;
     margin: 20px 0;
@@ -38,4 +39,21 @@
     width: 25px;
     border-radius: 50%;
     margin-right: 20px;
+}
+
+.small-sidebar {
+    width: 5%;
+}
+
+.small-sidebar p {
+    display: none;
+}
+
+.small-sidebar h3 {
+    display: none;
+}
+
+.small-sidebar hr {
+    width: 50%;
+    margin-bottom: 25px;
 }
