@@ -1,10 +1,12 @@
 import PlayVideo from '../../Components/PlayVideo/PlayVideo'
+import Recommended from '../../Components/Recommnended/Recommended'
 import './Video.css'
 
 const Video = () => {
     return (
         <div className='play-container'>
             <PlayVideo />
+            <Recommended />
         </div>
     )
 }
