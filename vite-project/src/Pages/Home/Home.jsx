@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from 'react'
 import Feed from '../../Components/Feed/Feed'
 import SideBar from '../../Components/SideBar/SideBar'

@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-key */
-
 import './Feed.css'
 import { Link } from 'react-router-dom'
 import { API_KEY, valueConverter } from '../../data'
@@ -26,7 +23,7 @@ const Feed = ({ category }) => {
         <div className="feed">
             {data.map((item, index) => {
                 return (
-                    <Link to={`video/${item.snippet.categoryId}/${item.id}`} className='card'>
+                    < Link to={`video/${item.snippet.categoryId}/${item.id}`} className='card' key={index}>
                         <img src={item.snippet.thumbnails.medium.url} alt="" />
                         <h2>{item.snippet.title}</h2>
                         <h3>{item.snippet.channelTitle}</h3>
@@ -34,7 +31,7 @@ const Feed = ({ category }) => {
                     </Link>
                 )
             })}
-        </div>
+        </div >
     )
 }
 

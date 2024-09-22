@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import './SideBar.css'
 import home from '../../assets/home.png'
 import game_icon from '../../assets/game_icon.png'
