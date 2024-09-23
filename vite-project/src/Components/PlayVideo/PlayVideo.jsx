@@ -6,8 +6,11 @@ import save from '../../assets/save.png'
 import { useEffect, useState } from 'react'
 import { API_KEY, valueConverter } from '../../data'
 import moment from 'moment'
+import { useParams } from 'react-router-dom'
 
-const PlayVideo = ({ videoId }) => {
+const PlayVideo = () => {
+
+    const { videoId } = useParams()
 
     const [apiData, setApiData] = useState(null)
     const [channelData, setChannelData] = useState(null)
@@ -33,7 +36,7 @@ const PlayVideo = ({ videoId }) => {
 
     useEffect(() => {
         fetchVideoData()
-    }, [])
+    }, [videoId])
 
     useEffect(() => {
         fetchOtherData()
